@@ -9,7 +9,7 @@ namespace FinalProject.Services
         public static async Task InitializeAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             string adminEmail = "admin@phonestore.com";
-            string customerEmail = "customer@phonestore.com";
+          /*  string customerEmail = "customer@phonestore.com";*/
             string password = "Password123!";
 
             if (await roleManager.FindByNameAsync("Administrator") == null)
