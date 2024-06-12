@@ -1,47 +1,34 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿// RoleInitializer.cs
 using FinalProject.Models;
+using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 
-namespace FinalProject.Services
+public static class RoleInitializer
 {
-    public static class RoleInitializer
+    public static async Task InitializeAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
     {
-        public static async Task InitializeAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        string adminEmail = "admin@phonestore.com";
+        string password = "Password123!";
+
+        if (!await roleManager.RoleExistsAsync("Administrator"))
         {
-            string adminEmail = "admin@phonestore.com";
-          /*  string customerEmail = "customer@phonestore.com";*/
-            string password = "Password123!";
+            await roleManager.CreateAsync(new IdentityRole("Administrator"));
+        }
 
-            if (await roleManager.FindByNameAsync("Administrator") == null)
+        var adminUser = await userManager.FindByEmailAsync(adminEmail);
+        if (adminUser == null)
+        {
+            adminUser = new ApplicationUser
             {
-                await roleManager.CreateAsync(new IdentityRole("Administrator"));
-            }
+                Email = adminEmail,
+                UserName = adminEmail,
+                EmailConfirmed = true
+            };
 
-            if (await roleManager.FindByNameAsync("Customer") == null)
+            var result = await userManager.CreateAsync(adminUser, password);
+            if (result.Succeeded)
             {
-                await roleManager.CreateAsync(new IdentityRole("Customer"));
-            }
-
-            if (await userManager.FindByNameAsync(adminEmail) == null)
-            {
-                ApplicationUser admin = new ApplicationUser { Email = adminEmail, UserName = adminEmail };
-                IdentityResult result = await userManager.CreateAsync(admin, password);
-
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(admin, "Administrator");
-                }
-            }
-
-            if (await userManager.FindByNameAsync(customerEmail) == null)
-            {
-                ApplicationUser customer = new ApplicationUser { Email = customerEmail, UserName = customerEmail };
-                IdentityResult result = await userManager.CreateAsync(customer, password);
-
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(customer, "Customer");
-                }
+                await userManager.AddToRoleAsync(adminUser, "Administrator");
             }
         }
     }
