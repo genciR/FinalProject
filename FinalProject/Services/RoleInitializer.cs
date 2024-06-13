@@ -1,5 +1,4 @@
-﻿// RoleInitializer.cs
-using FinalProject.Models;
+﻿using FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 

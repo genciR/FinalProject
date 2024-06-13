@@ -13,6 +13,186 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\IcoMoon-Free.ttf",
+      "PackagePath": "staticwebassets\\fonts\\IcoMoon-Free.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\Poppins-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Poppins-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\1.png",
+      "PackagePath": "staticwebassets\\images\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\2.png",
+      "PackagePath": "staticwebassets\\images\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\3.png",
+      "PackagePath": "staticwebassets\\images\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\4.png",
+      "PackagePath": "staticwebassets\\images\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\5.png",
+      "PackagePath": "staticwebassets\\images\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\6.png",
+      "PackagePath": "staticwebassets\\images\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\about.png",
+      "PackagePath": "staticwebassets\\images\\about.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\aboutbg.jpg",
+      "PackagePath": "staticwebassets\\images\\aboutbg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\banner1.png",
+      "PackagePath": "staticwebassets\\images\\banner1.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\bg.png",
+      "PackagePath": "staticwebassets\\images\\bg.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\hea.png",
+      "PackagePath": "staticwebassets\\images\\hea.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\images\\loading.gif"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\menu_icon.png",
+      "PackagePath": "staticwebassets\\images\\menu_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\mobile.jpg",
+      "PackagePath": "staticwebassets\\images\\mobile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\search_icon.png",
+      "PackagePath": "staticwebassets\\images\\search_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\star.png",
+      "PackagePath": "staticwebassets\\images\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\top-icon.png",
+      "PackagePath": "staticwebassets\\images\\top-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\images\\top_arrow.png",
+      "PackagePath": "staticwebassets\\images\\top_arrow.png"
+    },
+    {
       "Id": "C:\\Users\\genci\\OneDrive\\Desktop\\C#-.NET\\FinalProject\\FinalProject\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

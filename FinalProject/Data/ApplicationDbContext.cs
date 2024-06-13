@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
         }
-            public DbSet<Category> Categories { get; set; }
-            public DbSet<Product> Producties{ get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,24 +28,7 @@ namespace FinalProject.Data
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<ApplicationUser>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-
-            modelBuilder.Entity<Product>()
-                .HasIndex(p => p.Name)
-                .HasDatabaseName("Index_Product_Name");
-
-            modelBuilder.Entity<Product>()
-                .ToTable("ProductsTable");
-
-            modelBuilder.Entity<Category>()
-                .ToTable("CategoriesTable");
-
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Price)
-                .HasDefaultValue(0.0m);
-
+            // Seed data (if needed)
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, Name = "Smartphones" },
                 new Category { CategoryId = 2, Name = "Accessories" }
@@ -57,5 +40,4 @@ namespace FinalProject.Data
             );
         }
     }
-
 }
