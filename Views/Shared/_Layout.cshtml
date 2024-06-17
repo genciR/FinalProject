@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Smartphone_Shop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="m-0 p-0 h-100" style="background-color: #D3D3D3">
+    <header id="header">
+        <partial name="_MainNavbar"></partial>
+    </header>
+    <div class="container " id="content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<footer>
+    <div class="d-flex flex-column justify-content-center align-items-center bg-dark text-white mt-3" style="height: 10rem; position:relative; top:10rem;">
+        <p class="fs-5">SmartShop © 2022</p>
+        <a asp-controller="Home" asp-action="Location" class="btn btn-outline-light">Our Location</a>
+    </div>
+</footer>
+</html>
+
+

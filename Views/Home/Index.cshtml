@@ -1,0 +1,25 @@
+﻿@using Smartphone_Shop.Models.ViewModels
+@model PhoneListViewModel
+
+
+<div class="container-fluid d-flex flex-column align-items-center position-relative">
+    <h2 class="m-2">Welcome to SmartShop</h2>
+    <p class="fs-3">Hot Offers:</p>
+    <div class="d-flex flex-wrap justify-content-center">
+        @foreach(var phone in @Model.Phones)
+        {
+            <partial name="_PhoneCard" model="phone"></partial>
+        }
+    </div>
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-dark mt-5" asp-controller="Phone" asp-action="List">See all of our products</a>
+    </div>
+    @if (User.IsInRole("Admin"))
+    {
+         <div class="d-flex justify-content-center">
+            <a class="btn btn btn-outline-secondary mt-5" asp-controller="Phone" asp-action="CreatePhone">Add new phone to database</a>
+        </div>
+        @ViewBag.AccessErrorMsg
+    }
+    <div id="contatcContainer">
+</div>

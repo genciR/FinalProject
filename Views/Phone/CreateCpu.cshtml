@@ -1,0 +1,36 @@
+﻿@using Smartphone_Shop.Models.Entities
+@model Cpu
+
+<form method="post" action="CreateCpu" role="form" class="d-flex justify-content-center mt-3">
+    <div class="w-50 d-flex flex-column" asp-validation-summary="All">
+        <h4 class="w-100 d-flex justify-content-center">Add a new CPU:</h4>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.ModelName"></label>
+            <input asp-for="@Model.ModelName" class="form-control" />
+            <span asp-validation-for="@Model.ModelName" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.NumOfCores"></label>
+            <input type="number" asp-for="@Model.NumOfCores" class="form-control" />
+            <span asp-validation-for="@Model.NumOfCores" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.Frequency"></label>
+            <input type="number" step="0.01" asp-for="@Model.Frequency" class="form-control" />
+            <span asp-validation-for="@Model.Frequency" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.ManProcess"></label>
+            <input type="number" asp-for="@Model.ManProcess" class="form-control" />
+            <span asp-validation-for="@Model.ManProcess" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.GraphicsChip"></label>
+            <input asp-for="@Model.GraphicsChip" class="form-control" />
+            <span asp-validation-for="@Model.GraphicsChip" class="text-danger"></span>
+        </div>
+       <div class="d-flex justify-content-center w-100">
+            <input type="submit" class="btn btn-secondary btn-lg mt-5" value="Submit"/>
+        </div>
+    </div>
+</form>

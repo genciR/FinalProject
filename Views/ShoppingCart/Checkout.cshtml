@@ -1,0 +1,50 @@
+﻿@using Smartphone_Shop.Models.Entities
+@model CheckoutModel
+
+<div class="row d-flex justify-content-center w-100 mt-5">
+    <div class="col-md-4">
+        <form method="post" asp-action="Checkout" role="form">
+            <h4 class="w-100 text-center">Please fill in your info.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.FirstName"></label>
+                <input asp-for="@Model.FirstName" class="form-control" />
+                <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="@Model.LastName"></label>
+                <input asp-for="@Model.LastName" class="form-control" />
+                <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label asp-for="@Model.ZipCode"></label>
+                <input asp-for="@Model.ZipCode" class="form-control" />
+                <span asp-validation-for="@Model.ZipCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label asp-for="@Model.Country"></label>
+                <input asp-for="@Model.Country" class="form-control" />
+                <span asp-validation-for="@Model.Country" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label asp-for="@Model.City"></label>
+                <input asp-for="@Model.City" class="form-control" />
+                <span asp-validation-for="@Model.City" class="text-danger"></span>
+            </div>
+
+             <div class="form-group mt-3">
+                <label asp-for="@Model.Address"></label>
+                <input asp-for="@Model.Address" class="form-control" />
+                <span asp-validation-for="@Model.Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group d-flex justify-content-center mt-5">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@using Smartphone_Shop.Models.Entities
+@model Brand
+
+<form method="post" action="CreateBrand" role="form" class="d-flex justify-content-center mt-3">
+    <div class="w-50 d-flex flex-column" asp-validation-summary="All">
+        <h4 class="w-100 d-flex justify-content-center">Add a new Brand:</h4>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.Name"></label>
+            <input asp-for="@Model.Name" class="form-control" />
+            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+        </div>
+       <div class="d-flex justify-content-center w-100">
+            <input type="submit" class="btn btn-secondary btn-lg mt-5" value="Submit"/>
+        </div>
+    </div>
+</form>

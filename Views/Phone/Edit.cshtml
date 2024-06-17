@@ -1,0 +1,125 @@
+﻿@model Phone
+
+@{
+    ViewData["Title"] = "Edit Phone";
+}
+
+<h2>Edit Phone</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="ModelName" class="control-label"></label>
+                <input asp-for="ModelName" class="form-control" />
+                <span asp-validation-for="ModelName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BrandId" class="control-label"></label>
+                <select asp-for="BrandId" class="form-control" asp-items="@(ViewBag.Brands as SelectList)">
+                    <option value="">-- Select Brand --</option>
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CpuId" class="control-label">CPU Model</label>
+                <select asp-for="CpuId" class="form-control" asp-items="@(ViewBag.Cpus as SelectList)">
+                    <option value="">-- Select CPU Model --</option>
+                </select>
+                <span asp-validation-for="CpuId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DisplayRatio" class="control-label"></label>
+                <input asp-for="DisplayRatio" class="form-control" />
+                <span asp-validation-for="DisplayRatio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DisplayRes" class="control-label"></label>
+                <input asp-for="DisplayRes" class="form-control" />
+                <span asp-validation-for="DisplayRes" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DisplayTypeId" class="control-label">Display Type</label>
+                <select asp-for="DisplayTypeId" class="form-control" asp-items="@(ViewBag.DisplayTypes as SelectList)">
+                    <option value="">-- Select Display Type --</option>
+                </select>
+                <span asp-validation-for="DisplayTypeId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OpSystemId" class="control-label">Operating System</label>
+                <select asp-for="OpSystemId" class="form-control" asp-items="@(ViewBag.OpSystems as SelectList)">
+                    <option value="">-- Select Operating System --</option>
+                </select>
+                <span asp-validation-for="OpSystemId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Camera" class="control-label"></label>
+                <input asp-for="Camera" class="form-control" />
+                <span asp-validation-for="Camera" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SimTypeId" class="control-label">SIM Type</label>
+                <select asp-for="SimTypeId" class="form-control" asp-items="@(ViewBag.SimTypes as SelectList)">
+                    <option value="">-- Select SIM Type --</option>
+                </select>
+                <span asp-validation-for="SimTypeId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ColorId" class="control-label">Color</label>
+                <select asp-for="ColorId" class="form-control" asp-items="@(ViewBag.Colors as SelectList)">
+                    <option value="">-- Select Color --</option>
+                </select>
+                <span asp-validation-for="ColorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="HotOffer" /> @Html.DisplayNameFor(model => model.HotOffer)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-action="List" class="btn btn-default">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

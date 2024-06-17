@@ -1,0 +1,149 @@
+﻿@using Smartphone_Shop.Models.Entities
+@model Phone
+
+<div class="d-flex flex-column align-items-center p-5 mt-2 border border-secondary border-1 rounded-5">
+    <div class="w-100 d-flex justify-content-center mb-5">
+        <a class="btn btn-outline-dark me-4" asp-controller="Phone" asp-action="CreateCpu">Add a new CPU</a>
+        <a class="btn btn-outline-dark" asp-controller="Phone" asp-action="CreateBrand">Add a new Brand</a>
+    </div>
+    <h3>Add a new smartphone:</h3>
+    <form method="post" asp-action="CreatePhone" class="d-flex flex-column w-50 mt-5" role="form">
+        <div asp-validation-summary="All">
+
+        <div class="form-group">
+            <label asp-for="@Model.Brand"></label>
+            <select class="form-select w-auto" asp-for="@Model.BrandId">
+                @foreach(var brand in ViewData["Brands"] as List<Brand>)
+                {
+                    <option value="@brand.Id">@brand.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.BrandId" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.ModelName"></label>
+            <input asp-for="@Model.ModelName" class="form-control" />
+            <span asp-validation-for="@Model.ModelName" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.Description"></label>
+            <input asp-for="@Model.Description" class="form-control" />
+            <span asp-validation-for="@Model.Description" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.ImageUrl"></label>
+            <input asp-for="@Model.ImageUrl" class="form-control" />
+            <span asp-validation-for="@Model.ImageUrl" class="text-danger"></span>
+        </div>
+
+         <div class="form-group mt-3">
+            <label asp-for="@Model.Cpu"></label>
+            <select class="form-select w-auto" asp-for="@Model.CpuId">
+                @foreach(var cpu in ViewData["Cpus"] as List<Cpu>)
+                {
+                    <option value="@cpu.Id">@cpu.ModelName</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.CpuId" class="text-danger"></span>
+        </div>
+       <div class="form-group mt-3">
+            <label asp-for="@Model.Ram"></label>
+            <input type="number" asp-for="@Model.Ram" class="form-control" />
+            <span asp-validation-for="@Model.Ram" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.Storage"></label>
+            <input type="number" asp-for="@Model.Storage" class="form-control" />
+            <span asp-validation-for="@Model.Storage" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.Battery"></label>
+            <input type="number" asp-for="@Model.Battery" class="form-control" />
+            <span asp-validation-for="@Model.Battery" class="text-danger"></span>
+        </div>
+       <div class="form-group mt-3">
+            <label asp-for="@Model.DisplayType"></label>
+            <select class="form-select w-auto" asp-for="@Model.DisplayTypeId">
+                @foreach(var display in ViewData["DisplayTypes"] as List<DisplayType>)
+                {
+                    <option value="@display.Id">@display.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.DisplayTypeId" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.DisplayRatio"></label>
+            <input asp-for="@Model.DisplayRatio" class="form-control" />
+            <span asp-validation-for="@Model.DisplayRatio" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.DisplaySize"></label>
+            <input type="number" asp-for="@Model.DisplaySize" class="form-control" />
+            <span asp-validation-for="@Model.DisplaySize" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.DisplayRes"></label>
+            <input asp-for="@Model.DisplayRes" class="form-control" />
+            <span asp-validation-for="@Model.DisplayRes" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.Camera"></label>
+            <input asp-for="@Model.Camera" class="form-control" />
+            <span asp-validation-for="@Model.Camera" class="text-danger"></span>
+        </div>
+       <div class="form-group mt-3">
+            <label asp-for="@Model.OpSystem"></label>
+            <select class="form-select w-auto" asp-for="@Model.OpSystemId">
+                @foreach(var system in ViewData["OpSystems"] as List<OpSystem>)
+                {
+                    <option value="@system.Id">@system.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.OpSystemId" class="text-danger"></span>
+        </div>
+       <div class="form-group mt-3">
+            <label asp-for="@Model.SimType"></label>
+            <select class="form-select w-auto" asp-for="@Model.SimTypeId">
+                @foreach(var sim in ViewData["SimTypes"] as List<SimType>)
+                {
+                    <option value="@sim.Id">@sim.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.OpSystemId" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.UsbType"></label>
+            <select class="form-select w-auto" asp-for="@Model.UsbTypeId">
+                @foreach(var usb in ViewData["UsbTypes"] as List<UsbType>)
+                {
+                    <option value="@usb.Id">@usb.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.OpSystemId" class="text-danger"></span>
+        </div>
+         <div class="form-group mt-3">
+            <label asp-for="@Model.Color"></label>
+            <select class="form-select w-auto" asp-for="@Model.ColorId">
+                @foreach(var color in ViewData["Colors"] as List<Color>)
+                {
+                    <option value="@color.Id">@color.Name</option>
+                }
+            </select>
+            <span asp-validation-for="@Model.OpSystemId" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="@Model.Price"></label>
+            <input type="number" step="0.01" asp-for="@Model.Price" class="form-control" />
+            <span asp-validation-for="@Model.Price" class="text-danger"></span>
+        </div>
+       <div class="form-group mt-3">
+            <label asp-for="@Model.Weight (grams)"></label>
+            <input type="number" asp-for="@Model.Weight" class="form-control" />
+            <span asp-validation-for="@Model.Weight" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-center w-100">
+            <input type="submit" class="btn btn-secondary btn-lg mt-5" value="Submit"/>
+        </div>
+        </div>
+    </form>
+</div>

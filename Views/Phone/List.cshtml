@@ -1,0 +1,18 @@
+﻿@using Smartphone_Shop.Models.ViewModels;
+@model PhoneListViewModel
+
+<partial name="_ProductsSelectNavbar"></partial>
+<div class="d-flex justify-content-center w-100">
+    <span class="h3 m-4">
+        @ViewData["currentBrand"]
+    </span>
+</div>
+<div class="d-flex justify-content-center flex-wrap">
+    @foreach(var phone in Model.Phones)
+    {
+        <partial name="_PhoneCard" model="phone"/> 
+    }
+</div>
+<div class="d-flex justify-content-center">
+    
+</div>

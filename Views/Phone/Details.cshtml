@@ -1,0 +1,88 @@
+﻿@using Smartphone_Shop.Models.BusinessModel
+@using System.Linq
+
+@model PhoneBM
+
+<div class="d-flex justify-content-center align-items-center w-100 flex-wrap">
+    <div class="d-flex justify-content-center align-items-center pt-5 mt-5">
+       <img src="@Model.ImageUrl" style="width: 25rem" alt="Model image"/>
+    </div>
+    <div class="d-flex flex-column align-items-start justify-content-center w-auto mt-5">
+        <p class="fs-4 m-0">@Model.BrandName @Model.ModelName </p>
+        <p class="fs-4 m-0">@Model.Storage GB @Model.Ram GB RAM @Model.ColorName</p>
+        <p class="fs-2 mt-5 fw-bold" style="color: coral;">@String.Format("{0:0.00}", Model.Price) EUR</p>
+        <form method="post">
+            <a class="btn btn-dark bg-gradient mt-5" asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-phoneId="@Model.Id">Add to cart</a>
+        </form>
+    </div> 
+</div>
+<div class="d-flex justify-content-center p-5">
+    <p class="fs-5">@Model.Description</p> 
+</div>
+<div class="d-flex flex-column justify-content-center align-items-center mt-3 border border-secondary border-1 rounded-5 w-auto p-5 bg-dark bg-gradient text-white">
+    <p class="fs-3 fw-bold">Specifications</p>
+    <div class="d-flex flex-column align-items-start justify-content-center w-auto mt-5">
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-3 fw-bold">Display:</p>
+            <p class="fs-5">@Model.DisplaySize inches, @Model.DisplayRes px, @Model.DisplayType</p>
+        </div>
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">CPU:</p>
+            <p class="fs-5"> @Model.CpuModel, @Model.CpuCores cores at @Model.CpuFrequency Ghz</p>
+        </div>
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">GPU:</p>
+            <p class="fs-5"> @Model.Gpu</p>
+        </div>
+         <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">RAM:</p>
+            <p class="fs-5">@Model.Ram GB</p>
+        </div>
+         <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">Storage:</p>
+            <p class="fs-5">@Model.Storage GB</p>
+        </div>
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">Battery:</p>
+            <p class="fs-5">@Model.Battery mah</p>
+        </div>        
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">Camera:</p>
+            <p class="fs-5">@Model.Camera</p>
+        </div> 
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">OS:</p>
+            <p class="fs-5">@Model.OpSystem</p>
+        </div> 
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">SIM:</p>
+            <p class="fs-5">@Model.SimType</p>
+        </div> 
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">USB:</p>
+            <p class="fs-5">@Model.UsbType</p>
+        </div> 
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-2 fw-bold">Weight:</p>
+            <p class="fs-5">@Model.Weight grams</p>
+        </div>
+        <div class="d-flex align-items-center w-100 border-secondary border-bottom mt-2">
+            <p class="fs-5 me-3 fw-bold">Released:</p>
+            <p class="fs-5">@Model.ReleaseDate
+        </div>
+    </div>
+</div> 
+@if(User.IsInRole("Admin")){
+    <form method="post" class="d-flex justify-content-center w-100 mt-5" asp-action="DeletePhone" asp-route-id="@Model.Id">
+        <input type="submit" class="btn btn-danger" value="Remove"/>
+    </form>
+   
+    <form method="post " class="d-flex justify-content-center w-100 mt-5" asp-action="Edit" asp-route-id="@Model.Id">
+    @if (User.IsInRole("Admin"))
+    {
+            <input type="submit" class="btn btn-success" value="Edit" />
+    }
+    </form>
+
+}
+

@@ -1,0 +1,16 @@
+﻿@using Smartphone_Shop.Models.BusinessModel
+@model PhoneBM
+
+
+    <div class="card m-3 hover rounded-4"  style="width:360px">
+        <a style="color: black; text-decoration: none;" asp-controller="Phone" asp-action="Details" asp-route-id="@Model.Id">
+            <img class="card-img-top" style="object-fit:cover; width: 100%; height: 25rem;" src="@Model.ImageUrl" alt="Card image">
+            <div class="card-footer">
+                <h5 class="card-title">@Model.BrandName @Model.ModelName @Model.Ram/@Model.Storage</h5>
+                <p class="fs-5">Price: @String.Format("{0:0.00}", Model.Price) EUR</p>
+            </div>
+        </a>
+    </div>
+
+    
+

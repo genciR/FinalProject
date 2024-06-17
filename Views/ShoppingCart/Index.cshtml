@@ -1,0 +1,55 @@
+﻿@using Smartphone_Shop.Models.ViewModels
+@model ShoppingCartViewModel
+
+
+<section class="h-100">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fs-3">Shopping Cart</h3>
+        </div>
+        @foreach(var item in Model.ShoppingCart.ShoppingCartItems){
+             <div class="card rounded-3 mb-4">
+              <div class="card-body p-4">
+                <div class="row d-flex justify-content-between align-items-center">
+                  <div class="col-md-2 col-lg-2 col-xl-2">
+                    <img
+                      src="@item.ItemImgUrl"
+                      class="img-fluid rounded-3" alt="Model image">
+                  </div>
+                  <div class="col-md-3 col-lg-3 col-xl-3">
+                    <p class="fs-4 mb-2">@item.BrandName @item.ModelName</p>
+                  </div>
+                  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 d-flex align-items-center w-auto">
+                    <h5 class="mb-0 fs-4 me-3">@String.Format("{0:0.00}", @item.Price) EUR</h5>
+                    <form method="post">
+                        <button class="btn btn-danger" asp-controller="ShoppingCart" asp-action="RemoveFromCart" asp-route-itemId="@item.Id">Remove</button>
+                    </form>
+                  </div>
+                  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                    <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        }
+        @if(Model.ShoppingCart.ShoppingCartItems.Count() < 1)
+        {
+            <span class="text-danger fs-3">Your shopping cart is empty!</span>
+        }
+
+        @if(Model.ShoppingCart.ShoppingCartItems.Count() >= 1)
+        {
+            <div class="card">
+                <div class="card-body d-flex justify-content-evenly">
+                    <a type="button" class="btn btn-dark" asp-controller="ShoppingCart" asp-action="Checkout">Proceed to Pay</a>
+                    <span class="fs-4">Total: @String.Format("{0:0.00}", Model.TotalPrice) EUR</span>
+                </div>
+            </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
