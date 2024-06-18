@@ -29,7 +29,13 @@
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
-
+            <div class="form-group">
+                <label asp-for="UsbTypeId" class="control-label">USB Type</label>
+                <select asp-for="UsbTypeId" class="form-control" asp-items="@(ViewBag.UsbTypes as SelectList)">
+                    <option value="">-- Select USB Type --</option>
+                </select>
+                <span asp-validation-for="UsbTypeId" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="BrandId" class="control-label"></label>
                 <select asp-for="BrandId" class="form-control" asp-items="@(ViewBag.Brands as SelectList)">

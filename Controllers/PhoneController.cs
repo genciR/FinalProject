@@ -152,15 +152,17 @@ namespace Smartphone_Shop.Controllers
 
             if (!ModelState.IsValid)
             {
-                _logger.LogWarning("Model state is invalid for editing phone ID {id}.");
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                foreach (var modelStateKey in ViewData.ModelState.Keys)
                 {
-                    _logger.LogError($"Error in ModelState: {error.ErrorMessage}");
+                    var modelStateVal = ViewData.ModelState[modelStateKey];
+                    foreach (var error in modelStateVal.Errors)
+                    {
+                        _logger.LogError($"Error in {modelStateKey}: {error.ErrorMessage}");
+                    }
                 }
-                PrepareDropdowns(model);
+                PrepareDropdowns(model); // Ensure dropdowns are repopulated
                 return View(model);
             }
-
             var phone = await _db.Phone.FirstOrDefaultAsync(p => p.Id == id);
             if (phone == null)
             {
@@ -199,6 +201,7 @@ namespace Smartphone_Shop.Controllers
             ViewBag.OpSystems = new SelectList(_db.OpSystem.ToList(), "Id", "Name", phone?.OpSystemId);
             ViewBag.SimTypes = new SelectList(_db.SimType.ToList(), "Id", "Name", phone?.SimTypeId);
             ViewBag.UsbTypes = new SelectList(_db.UsbType.ToList(), "Id", "Name", phone?.UsbTypeId);
+
         }
 
         /*private async Task PopulateDropdownsAsync(Phone phone)
